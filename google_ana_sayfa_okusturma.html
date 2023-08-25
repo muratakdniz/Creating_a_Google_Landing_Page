@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="resimler_ve_ikonlar/google-icon.png" >
+    <title>Google</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="google-style.css">
+</head>
+<body>
+
+    <div class="google-container">
+        <img class="google-logo" src="resimler_ve_ikonlar/google-logo.png" alt="Google Logo">
+        <div class="arama-kutusu">
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+            <div class="arama-kutusu-bilesenler">
+                <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #d7dff4;"></i>
+                <input type="text" name="q" class="arama-girisi" placeholder="Google'da Arayın veya URL'yi yazın">
+                <i class="fas fa-microphone fa-xl" style="margin: 7px;"></i>
+                <i class="fa-solid fa-camera-retro fa-xl" ></i>
+            </div>
+            
+            <div class="butonlar">
+                <input type="submit" value="Google Search" class="arama-butonu">
+                <button type="button" class="sansi-dene-butonu" onclick="feelingLucky()">I'M Feeling Lucky</button>
+            </div>
+            <div class="butonlar-2">
+                <a href="https://mail.google.com/" class="gmail-butonu">Gmail</a>
+                <a href="https://www.google.com/imghp" class="resimler-butonu">Images</a>
+                <img src="resimler_ve_ikonlar/google_uygulamalar.png" alt="google-apps" class="google-apps">
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <script>
+        function feelingLucky() {
+            var query = document.querySelector('.arama-girisi').value;
+            if (query.trim() !== "") {
+                var luckyUrl = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&btnI';
+                window.open(luckyUrl, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
